@@ -10,7 +10,7 @@ The original program was a **Java-based console application** for managing rescu
 - Reserve animals for service
 - Print lists of available animals
 
-This version used simple `ArrayList` structures, relied on colse input/output, and lacked persistance, Modular structure, and separation of concerns. 
+This version used simple `ArrayList` structures, relied on console input/output, and lacked persistance, Modular structure, and separation of concerns. 
 
 ---
 
