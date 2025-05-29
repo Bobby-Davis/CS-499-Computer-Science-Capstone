@@ -21,9 +21,9 @@ To meet modern software engineering standards, I restructure the project using:
 ### Spring Boot (Backend)
 
 - Rebuilt the backend using **Spring Boot**, applying the **MVC design pattern**:
-    -**Model**: A unified `Animal` class instead of separate Dog and Monkey classes
-    -**Service**: A dedicated `AnimalService` class for business logic
-    -**Contoller**: RESTful API endpoints via `AnimalController`
+    - **Model**: A unified `Animal` class instead of separate Dog and Monkey classes
+    - **Service**: A dedicated `AnimalService` class for business logic
+    - **Controller**: RESTful API endpoints via `AnimalController`
 - Integrated **MongoDB** for persistent, cloud-based data storage
 - Implemented **CRUD operations** for managing animals
 - Applied **input validation** and secure codign practices
