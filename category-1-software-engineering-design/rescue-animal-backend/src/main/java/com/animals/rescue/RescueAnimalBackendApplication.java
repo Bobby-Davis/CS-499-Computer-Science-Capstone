@@ -1,4 +1,4 @@
-package com.animals.rescue.rescue_animal_backend;
+package com.animals.rescue;
 
 import com.animals.rescue.model.User;
 import org.springframework.boot.CommandLineRunner;

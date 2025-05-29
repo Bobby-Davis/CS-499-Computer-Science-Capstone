@@ -78,17 +78,5 @@ export class RescueAnimalsComponent implements OnInit {
 
   editAnimal(animal: Animal): void {
     this.router.navigate(['/edit-animal', animal.id]);
-}
-
-
-  // Optional: simulate login/logout for testing UI (can be removed if you use real login system)
-  login(): void {
-    localStorage.setItem('jwtToken', 'mockToken');
-    this.isAdmin = true;
-  }
-
-  logout(): void {
-    localStorage.removeItem('jwtToken');
-    this.isAdmin = false;
   }
 }
