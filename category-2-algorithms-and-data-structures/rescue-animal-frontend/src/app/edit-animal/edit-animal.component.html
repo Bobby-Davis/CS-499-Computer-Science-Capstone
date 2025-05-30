@@ -24,13 +24,13 @@
   <div class="form-group">
     <label>Animal Type:</label>
     <select [(ngModel)]="animal.type" name="type" required>
-      <option value="dog">Dog</option>
-      <option value="monkey">Monkey</option>
+      <option value="Dog">Dog</option>
+      <option value="Monkey">Monkey</option>
     </select>
   </div>
 
   <!-- Breed (Only for Dogs) -->
-<div *ngIf="animal.type === 'dog'" class="form-group">
+<div *ngIf="animal.type === 'Dog'" class="form-group">
   <label>Breed:</label>
   <select [(ngModel)]="selectedBreed" name="breed" (change)="onBreedChange()">
     <option value="Labrador">Labrador</option>
@@ -47,14 +47,14 @@
 </div>
 
 <!-- Species (Only for Monkeys) -->
-<div *ngIf="animal.type === 'monkey'" class="form-group">
+<div *ngIf="animal.type === 'Monkey'" class="form-group">
   <label>Species:</label>
   <select [(ngModel)]="selectedBreed" name="breed" (change)="onBreedChange()">
     <option value="Capuchin">Capuchin</option>
     <option value="Guenon">Guenon</option>
     <option value="Macaque">Macaque</option>
     <option value="Marmoset">Marmoset</option>
-    <option value="Squirrel monkey">Squirrel monkey</option>
+    <option value="Squirrel monkey">Squirrel Monkey</option>
     <option value="Tamarin">Tamarin</option>
     <option value="Other">Other</option>
   </select>
@@ -69,8 +69,8 @@
   <div class="form-group">
     <label>Gender:</label>
     <select [(ngModel)]="animal.gender" name="gender" required>
-      <option value="male">Male</option>
-      <option value="female">Female</option>
+      <option value="Male">Male</option>
+      <option value="Female">Female</option>
     </select>
   </div>
 
@@ -96,14 +96,14 @@
   <div class="form-group">
     <label>Training Status:</label>
     <select [(ngModel)]="animal.trainingStatus" name="trainingStatus">
-      <option value="intake">Intake</option>
+      <option value="Intake">Intake</option>
       <option value="PhaseI">Phase I</option>
       <option value="PhaseII">Phase II</option>
       <option value="PhaseIII">Phase III</option>
       <option value="PhaseIV">Phase IV</option>
       <option value="PhaseV">Phase V</option>
-      <option value="inService">In Service</option>
-      <option value="farm">Farm</option>
+      <option value="In Service">In Service</option>
+      <option value="Farm">Farm</option>
     </select>
   </div>
 

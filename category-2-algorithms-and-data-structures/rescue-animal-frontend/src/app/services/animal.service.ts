@@ -63,4 +63,23 @@ export class AnimalService {
     const headers = this.getAuthHeaders();
     return this.http.delete<void>(`${this.apiUrl}/${id}`);
   }
+
+  // Get animals from the backend based on filters
+  getFilteredAnimals(filters: any): Observable<Animal[]> {
+    // Get JWT auth headers
+    const headers = this.getAuthHeaders();
+
+    // Create a URLSearchParams object to build the query string
+    let params = new URLSearchParams();
+
+    // Add each filter to the query string if it has a value
+    for (const key in filters) {
+      if (filters[key]) {
+        params.set(key, filters[key]);
+      }
+    }
+
+    // Send a GET request to the backend with filters in the URL
+    return this.http.get<Animal[]>(`${this.apiUrl}/filter?${params.toString()}`);
+  }
 }

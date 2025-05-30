@@ -44,6 +44,6 @@ public class AnimalService {
 
     // Get available animals by type (not reserved and in service)
     public List<Animal> getAvailableAnimals(String type) {
-        return animalRepository.findByTypeAndTrainingStatusAndReserved(type, "in service", false);
+        return animalRepository.findByTypeAndTrainingStatusAndReserved(type, "In Service", false);
     }
 }
