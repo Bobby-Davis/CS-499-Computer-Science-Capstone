@@ -40,10 +40,11 @@ public class SecurityConfig {
             // Define authorization rules: 
             .authorizeHttpRequests(auth -> auth
                 // Allow these endpoints without being logged in
-                .requestMatchers("/login", "/register").permitAll()
+                .requestMatchers("/login", "/register", "/error").permitAll()
 
                 // Allow unauthenticated GET (public access)
                 .requestMatchers(HttpMethod.GET, "/api/animals").permitAll()
+                .requestMatchers(HttpMethod.GET, "/api/animals/filter").permitAll()
 
                 // Allow authenticated POST, PUT, DELETE to /api/animals
                 .requestMatchers(HttpMethod.POST, "/api/animals").authenticated()
