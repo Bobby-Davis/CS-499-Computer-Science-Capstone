@@ -1,8 +1,19 @@
 # CS-499 Capstone - Category 2: Algorithms and Data Structures
 
-This enhancement focuses on improving the performance, scalability, and efficiency of animal data handling in the Rescue Animal Management System. Originally created in IT-145, the application used in-memory `ArrayList`s and manual `for` loops for filtering and searching records. This was manageable for small datasets, but as data volume increased, operations became slower and more inefficient.
 
-To address these limitations, I enhanced the system by introducing structured filtering, sorting, and pagination logic that leverages MongoDB’s native query and indexing capabilities. These enhancements significantly reduced the computational load on both the backend and frontend while providing a better user experience.
+## Original Program Description
+
+The original Rescue Animal Management System was created as a Java console application in the IT-145 course. It allowed users to manage two types of animals — dogs and monkeys — using command-line input. Animal records were stored in `ArrayList` collections, and operations such as searching, filtering, and listing animals were performed using `for` loops and conditional logic. For example, to find available animals with a specific training status, the program would loop through the entire list and check each record manually.
+
+While this approach was functional for small datasets, it did not scale well. The time complexity for search and filter operations was **O(n)** — meaning that as the number of animals increased, performance decreased linearly. There was no support for sorting or pagination, and filtering by multiple fields required nested `if` statements and multiple passes over the data. In addition, data was not persistent; all records were lost once the program closed.
+
+---
+
+## Overview of Enhancement
+
+To improve performance and scalability, the application was enhanced using algorithmic principles and MongoDB’s native indexing and querying capabilities. This enhancement focused specifically on how animal data is filtered, sorted, and paginated — replacing inefficient in-memory operations with optimized backend logic.
+
+Instead of performing linear scans in Java, the new system constructs queries in the backend that MongoDB can resolve efficiently, often in **O(log n)** time when indexed. These enhancements significantly reduce the computational burden, improve the user experience, and allow the system to scale with larger datasets.
 
 ---
 
