@@ -1,5 +1,7 @@
 # CS-499 Capstone - Category 2: Algorithms and Data Structures
 
+This section of the capstone focuses on **Algorithms and Data Structures** by enhancing how data is searched, sorted, and retrieved within the Rescue Animal Management System. The goal is to apply algorithmic thinking and data handling techniques that optimize system performance, particularly in filtering, sorting, and pagination of animal records. By offloading data operations to the backend and using efficient query patterns in MongoDB, the application becomes more scalable and responsive.
+
 
 ## Original Program Description
 
