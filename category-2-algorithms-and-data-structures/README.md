@@ -1,6 +1,4 @@
-# CS-499 Capstone – Category 2: Algorithms and Data Structures
-
-## Overview
+# CS-499 Capstone - Category 2: Algorithms and Data Structures
 
 This enhancement focuses on improving the performance, scalability, and efficiency of animal data handling in the Rescue Animal Management System. Originally created in IT-145, the application used in-memory `ArrayList`s and manual `for` loops for filtering and searching records. This was manageable for small datasets, but as data volume increased, operations became slower and more inefficient.
 
