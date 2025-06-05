@@ -1,4 +1,4 @@
-# CS 499 Capstone – Category 2: Algorithms and Data Structures
+# CS-499 Capstone – Category 2: Algorithms and Data Structures
 
 ## Overview
 
