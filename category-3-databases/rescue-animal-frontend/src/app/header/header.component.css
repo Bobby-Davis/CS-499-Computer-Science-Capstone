@@ -1,0 +1,178 @@
+/*********************************
+Login
+*********************************/
+.login-bar {
+    background: linear-gradient(to right, white, red);
+    color: white;
+    padding: 8px 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 14px;
+    width: 100%;
+    position: relative;
+}
+
+.login-bar:hover .login-content {
+    display: block;
+}
+
+.login-bar:hover {
+    background: darkred;
+}
+
+.login-content {
+    max-width: 100%;
+    margin: 0 auto;
+    display: none;
+    justify-content: flex-end;
+    padding: 0 40px;
+    gap: 10px;
+}
+
+.login-content a {
+    color: lightpink;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.login-link {
+    position: relative;
+    color: lightpink;
+    text-decoration: none;
+    font-weight: bold;
+    padding-bottom: 4px;
+    transition: color 0.3s;
+}
+
+.login-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background-color: lightpink;
+    transition: width 0.3s ease;
+}
+
+.login-link:hover::after {
+    width: 100%;
+}
+
+.login-link:hover {
+    color: white;
+}
+/**********************************
+Navigation Bar
+***********************************/
+
+.main-header {
+    background: linear-gradient(to right, white, red);
+    width: 100%;
+    height: 80px;
+}
+
+.header-content {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+}
+
+.menu-toggle {
+    display: none;
+    background: darkred;
+    color: white;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    border-radius: 6px;
+    width: 40px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.logo img {
+    height: 80px;
+    object-fit: contain;
+}
+
+.welcome-text {
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+.main-nav {
+    display: flex;
+    gap: 40px;
+}
+
+.main-nav a {
+    position: relative;
+    color: darkred;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 20px;
+    transition: color white 0.3; 
+}
+
+.main-nav a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 0;
+    background-color: white;
+    transition: width 0.3s ease;  /* animates the underline */
+}
+
+.main-nav a:hover {
+    color: white; 
+}
+
+
+.main-nav a:hover::after {
+    width: 100%;        /* make the underline grow */
+}
+
+@media (max-width: 768px) {
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .main-nav {
+        display: none;
+        flex-direction: column;
+        background-color: rgb(243, 196, 196);
+        position: absolute;
+        top: 100px;
+        right: 0;
+        width: 100%;
+        padding: 10px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .main-nav.open {
+        display: flex;
+    }
+
+    .main-nav a {
+        display: inline-block;
+        position: relative;
+        text-decoration: none;
+        padding: 10px 0;
+        color: darkred;
+        font-size: 18px;
+    }
+
+    
+
+}

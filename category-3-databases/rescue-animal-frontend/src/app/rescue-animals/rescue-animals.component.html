@@ -1,0 +1,143 @@
+<section class="rescue-animals">
+  <div class="animals-container">
+    <h2>Our Rescue Animals</h2>
+
+    <!-- Admin-only Add Animal button -->
+    <div *ngIf="isAdmin" class="add-button">
+      <button (click)="router.navigate(['/add-animal'])"> Add New Animal</button>
+    </div>
+
+    <button (click)="toggleFilters()" class="hide-filter-button">
+      {{ showFilters ? 'Hide Filters' : 'Show Filters' }}
+    </button>
+
+    <!-- Filter Section-->
+    <div *ngIf="showFilters" class="filter-panel">
+      <h3>Filter Animals</h3>
+
+      <div class=filter-row>
+
+        <!-- Availablility -->
+        <fieldset class="filter-group">
+        <legend>Availability</legend>
+          <label>
+            <input type="checkbox" [(ngModel)]="available"> Available
+          </label>
+        </fieldset>
+
+        <!-- Type Filter -->
+        <fieldset class="filter-group">
+          <legend>Animal Type</legend>
+          <label>
+            <input type="checkbox" [(ngModel)]="filterTypes.Dog"> Dog
+          </label>
+          <label>
+            <input type="checkbox" [(ngModel)]="filterTypes.Monkey"> Monkey
+          </label>
+        </fieldset>
+
+        <!-- Size Filter -->
+        <fieldset class="filter-group">
+          <legend>Size</legend>
+          <label>
+            <input type="checkbox" [(ngModel)]="filterSizes.small"> Small (&lt; 25lbs)
+          </label>
+          <label>
+            <input type="checkbox" [(ngModel)]="filterSizes.medium"> Medium (25 - 50lbs)
+          </label>
+          <label>
+            <input type="checkbox" [(ngModel)]="filterSizes.large"> Large (&gt; 50lbs)
+          </label>
+        </fieldset>
+
+        <!-- Age Filter-->
+        <fieldset class="filter-group">
+        <legend>Age</legend>
+          <div>
+            <label> Min Age: <input type="number" [(ngModel)]="ageMin" min="0" class="age-input"></label>
+            <label> Max Age: <input type="number" [(ngModel)]="ageMax" min="0" class="age-input"></label>
+          </div>
+        </fieldset>
+      </div>
+
+      <div class="sort-group" class="filter-group">
+        <label for="sortBy" (change)="applyFilters()">Sort By:</label>
+        <select [(ngModel)]="sortBy" id="sortBy">
+          <option value="sizeAsc">Size: Smallest to Largest</option>
+          <option value="sizeDesc">Size: Largest to Smallest</option>
+          <option value="nameAsc">Name: A to Z</option>
+          <option value="nameDesc">Name: Z to A</option>
+          <option value="ageAsc">Age: Youngest to Oldest</option>
+          <option value="ageDesc">Age: Oldest to Youngest</option>
+        </select>
+      </div>
+
+      <!-- Apply Button -->
+      <div class="button-group">
+        <button (click)="applyFilters()">Apply</button>
+        <button (click)="resetFilters()">Reset</button>
+      </div>
+
+    </div>
+
+
+    <!-- Animal cards -->
+    <div class="animal-list">
+      <!-- repeat this for up to 10 animals -->
+       <div class="animal-card" *ngFor="let animal of paginatedAnimals; let i = index" [class.expanded]="expandedCardIndex === i" (click)="toggleDetails(i)">
+        <img [src]="animal.image" [alt]="animal.name" />
+        <h3>Name: {{ animal.name }}</h3>
+  
+
+        <!-- expand info shown when clicked (hidden by default) -->
+        <div class="animal-details">
+          <p>Type: {{ animal.type }}</p>
+          <p>Breed/Species: {{ animal.breedOrSpecies }}</p>
+          <p>Gender: {{ animal.gender }}</p>
+          <p>Age: {{ animal.age }} years</p>
+          <p>Weight: {{ animal.weight }} lbs</p>
+          <p>Acquisition Date: {{ animal.acquisitionDate }}</p>
+          <p>Training Status: {{ animal.trainingStatus }}</p>
+          <p>Reserved: {{ animal.reserved ? 'Yes' : 'No' }}</p>
+          <p>In-Service Location: {{ animal.inServiceLocation }}</p>
+
+          <!-- Monkey-specific (only show if exists) -->
+          <p *ngIf="animal.height">Height: {{ animal.height }} in</p>
+          <p *ngIf="animal.tailLength">Tail Length: {{ animal.tailLength }} in</p>
+          <p *ngIf="animal.bodyLength">Body Length: {{ animal.bodyLength }} in</p>
+        </div>
+
+        <!-- Admin-only buttons -->
+        <div *ngIf="isAdmin" class="button-group">
+          <button (click)="editAnimal(animal)">Edit</button>
+          <button (click)="deleteAnimal(animal.id!)">Delete</button>
+        </div>
+       </div>
+
+
+    </div>
+
+    <div class="animal">
+      {{ filteredAnimals.length }} Rescue Animal{{ filteredAnimals.length !== 1 ? '\'s' : '' }} found
+    </div>
+  
+
+    <div class="pagination">
+      <button (click)="currentPage = currentPage - 1" [disabled]="currentPage === 1">
+        &laquo; Prev
+      </button>
+
+      <span> Page {{ currentPage }} of {{ totalPages }} </span>
+ 
+      <button (click)="currentPage = currentPage + 1" [disabled]="currentPage === totalPages">
+        Next &raquo; 
+      </button>
+    </div>
+
+  </div>
+
+  <div *ngIf="animals && filteredAnimals.length === 0">
+  <p>No animals to display.</p>
+  </div>
+
+</section>

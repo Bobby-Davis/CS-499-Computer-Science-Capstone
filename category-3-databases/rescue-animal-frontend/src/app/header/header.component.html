@@ -1,0 +1,30 @@
+<!-- Login -->
+<div class="login-bar" *ngIf="!isLoggedIn()">
+  <div class="login-content">
+    <span>Admin Access: </span>
+    <a class="login-link" href="/login">Login</a>
+  </div>
+</div>
+
+
+<!-- Header -->
+<header class="main-header">
+  <div class="header-content">
+      <a routerLink="/" class="logo">
+        <img src="assets\images\GSlogo1.png" alt="Company Logo" class="logo">
+      </a>
+      <span class="welcome-text" *ngIf="isLoggedIn()">Welcome, {{ username }}!</span>
+      
+      <button class="menu-toggle" (click)="toggleMenu()">
+        &#9776;
+      </button>
+
+      <nav [class.open]="menuOpen" class="main-nav">
+        <a routerLink="/">Home</a>
+        <a routerLink="/rescue-animals">See Our Rescue Animals</a>
+        <a routerLink="/services">Services</a>
+        <a routerLink="/about">About</a>
+        <a *ngIf="isLoggedIn()" (click)="logout()" class="logout-link">Logout</a>
+      </nav>
+  </div>
+</header>
