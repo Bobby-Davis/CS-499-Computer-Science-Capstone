@@ -1,0 +1,71 @@
+/* ePortfolio.css */
+
+/* Global styles */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: whitesmoke;
+  color: black;
+  line-height: 1.6;
+}
+
+/* header section */
+header {
+  background-color: lightcyan;
+  padding: 60px 20px 0px;
+  text-align: center;
+  border-bottom: 1px solid lightgray;
+}
+
+header h1 {
+  font-size: 2.8em;
+  margin: 0;
+  color: black;
+}
+
+header h3 {
+  font-weight: normal;
+  color: gray;
+  margin-top: 5px;
+  margin-bottom: 40px;
+}
+
+header h2 {
+  font-size: 3.2em;
+  font-weight: normal;
+  color: dimgray;
+  margin-top: 60px;
+  margin-bottom: 0;
+}
+
+/* Main content area */
+main {
+  max-width: 900px;
+  margin: 40px auto;
+  background-color: whitesmoke;
+  color: black;
+}
+
+main h2 {
+  font-size: 1.8em;
+  margin-top: 40px;
+  color: black;
+  padding-bottom: 8px;
+}
+
+a {
+  color: dodgerblue;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 10px;
+}
