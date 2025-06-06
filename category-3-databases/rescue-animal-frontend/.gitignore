@@ -1,0 +1,57 @@
+# See https://docs.github.com/get-started/getting-started-with-git/ignoring-files for more about ignoring files.
+
+
+# Angular Frontend
+rescue-animal-frontend/node_modules/
+rescue-animal-frontend/dist/
+rescue-animal-frontend/.angular/cache/
+rescue-animal-frontend/.env
+
+# Spring Boot Backend
+rescue-animal-backend/target
+rescue-animal-backend/.classpath
+rescue-animal-backend/.project
+rescue-animal-backend/.settings/
+rescue-animal-backend/*.iml
+rescue-animal-backend/.env
+
+# Logs and output 
+*.log
+
+# Compiled output
+/dist
+/tmp
+/out-tsc
+/bazel-out
+
+# Node
+/node_modules
+npm-debug.log
+yarn-error.log
+
+# IDEs and editors
+.idea/
+.c9/
+*.launch
+*.sublime-workspace
+
+# Visual Studio Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history/*
+
+# Miscellaneous
+/.angular/cache
+.sass-cache/
+/connect.lock
+/coverage
+/libpeerconnection.log
+testem.log
+/typings
+
+# System files
+.DS_Store
+Thumbs.db
