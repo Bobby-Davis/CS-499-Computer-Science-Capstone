@@ -12,11 +12,11 @@
   
       <!-- Navigation links to trigger section swaps -->
       <nav>
-        <a href="#introduction" data-section="introduction">Introduction</a>
-        <a href="#code-review" data-section="code-review">Code Review</a> 
-        <a href="#category1" data-section="category1">Software Engineering and Design</a> 
-        <a href="#category2" data-section="category2">Algorithms and Data Structures</a> 
-        <a href="#category3" data-section="category3">Databases</a>
+        <a href="#javascript:void(0)" data-section="introduction">Introduction</a>
+        <a href="#javascript:void(0)" data-section="code-review">Code Review</a> 
+        <a href="#javascript:void(0)" data-section="category1">Software Engineering and Design</a> 
+        <a href="#javascript:void(0)" data-section="category2">Algorithms and Data Structures</a> 
+        <a href="#javascript:void(0)" data-section="category3">Databases</a>
       </nav>
     </header>
     
@@ -178,7 +178,7 @@
     <!-- Handles Page-Like content Swapping -->
     <script>
       // Get all nav links and section elements
-      const links = document.querySelectorAll('nav a');
+      const links = document.querySelectorAll('a[data-section]');
       const sections = document.querySelectorAll('.section');
   
       // Loop thorugh each nav link
