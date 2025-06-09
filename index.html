@@ -106,20 +106,21 @@
         <p>
           The artifact I selected for enhancement is my Rescue Animal Management System, originally developed as a Java-based console 
           application for the IT-145 course. The program allowed users to intake, reserve, and list rescue dogs and monkeys, storing animal 
-          data in memory using ArrayList. While it worked for a console environment, it was very limited. 
-
-          <img src="images/original-java-console.png" alt="Original Java console application" class="screenshot">
-          
-          It had no real database,
+          data in memory using ArrayList. While it worked for a console environment, it was very limited. It had no real database,
           no user interface, and no way to use the application outside of development environments.
         </p>
+
+        <img src="images/original-java-console.png" alt="Original Java console application" class="original-screenshot">
 
         <p>
           For this course, I chose to significantly enhance this artifact by transforming it into a full-stack web application using Spring Boot (Java)
           for the backend, MongoDB for the database, and Angular for the frontend. The result is a fully interactive and responsive application where 
           users can view, filter, and manage rescue animals through a modern web interface.
           
-          <img src="images/angular-animal-list.png" alt="Angular frontend animal list view" class="screenshot">
+        <div class="animal-list-image-stack">
+          <img src="images/angular-animal-list.png" alt="Angular frontend animal list view" class="animal-list-screenshot">
+          <img src="images/angular-animal-list2.png" alt="Mobile Angular frontend animal list view" class="mobile-animal-list-screenshot">
+        </div>
           
           Admin users can log in to manage animals by adding new ones, updating their details, or removing them from the lists.
           This new version can be used from any device with a browser and stores all data in a real database instead of memory.
@@ -128,14 +129,19 @@
         <p>
           I chose to include this artifact in my ePortfolio because it showcases both my growth and current capabilities in software design, full-stack development,
           RESTful APIs, and database management. The project brings together everything I've learned about frontend design, backend development, database storage,
-          and application security. I built a secure backend with Spring Boot that exposes REST API endpoints.
+          and application security. I built a secure backend with Spring Boot that exposes REST API endpoints. 
+        </p>
           
-          <img src="images/springboot-controller.png" alt="Spring Boot controller code" class="screenshot">
-          
+          <div class="springboot-image-stack">
+              <img src="images/springboot-controller1.png" alt="Spring Boot controller code1" >
+              <img src="images/springboot-controller2.png" alt="Spring Boot controller code2" >
+          </div>
+
+        <p>
           I connected that to an Angular frontend where users  can interact with the data. I also added a login system that uses JWT (JSON Web Tokens) and encrypted
           passwords with BCrypt so only admins can make changes to the animal list.
 
-          <img src="images/new-app-login.png" alt="New App Login" class="screenshot">
+          <img src="images/new-app-login.png" alt="New App Login" class="login-screenshot">
           
           I changed the code so that dogs and monkeys are now handled through one flexible Animal class,
           which makes the project easier to expand if we want to add more animals in the future.
@@ -164,7 +170,7 @@
           my growth, and my ability to deliver professional-quality work.
         </p>
 
-        <img src="images/new-app-home.png" alt="New Application Home" class="screenshot">
+        <img src="images/new-app-home.png" alt="New Application Home" class="home-screenshot">
       </section>
       
     </main>
