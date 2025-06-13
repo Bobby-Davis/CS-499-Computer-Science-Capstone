@@ -8,7 +8,6 @@ import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.mongodb.core.MongoTemplate;
-import org.springframework.data.domain.Sort;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -68,7 +67,7 @@ public class AnimalController {
         return animalService.getAvailableAnimals(type);
     }
 
-    // Get animals matchign filters
+    // Get animals matching filters
     @GetMapping("/filter")
     public List<Animal> filterAnimals(
         @RequestParam(required = false) String types,
@@ -111,11 +110,11 @@ public class AnimalController {
             if (ageMin != null && ageMax != null) {
                 ageCriteria.gte(ageMin).lte(ageMax);
 
-            // if only min age is set, filter animasl with age greater or equal to min
+            // if only min age is set, filter animals with age greater or equal to min
             } else if (ageMin != null) {
                 ageCriteria.gte(ageMin);
 
-            // If only max age is set, filter animasl with age less than or equal to max
+            // If only max age is set, filter animals with age less than or equal to max
             } else if (ageMax != null) {
                 ageCriteria.lte(ageMax);
             }
@@ -128,6 +127,7 @@ public class AnimalController {
             query.addCriteria(Criteria.where("trainingStatus").is("In Service"));
         }
 
+        // Check if user selected sort option, and apply the correct sorting
         if (sortBy != null) {
             switch (sortBy) {
                 case "sizeAsc" -> query.with(Sort.by(Sort.Direction.ASC, "weight"));

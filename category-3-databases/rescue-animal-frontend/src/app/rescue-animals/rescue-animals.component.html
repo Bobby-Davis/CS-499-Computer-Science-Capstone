@@ -83,8 +83,8 @@
 
     <!-- Animal cards -->
     <div class="animal-list">
-      <!-- repeat this for up to 10 animals -->
-       <div class="animal-card" *ngFor="let animal of paginatedAnimals; let i = index" [class.expanded]="expandedCardIndex === i" (click)="toggleDetails(i)">
+      <!-- repeat this for up to 6 animals -->
+       <div class="animal-card" *ngFor="let animal of animals; let i = index" [class.expanded]="expandedCardIndex === i" (click)="toggleDetails(i)">
         <img [src]="animal.image" [alt]="animal.name" />
         <h3>Name: {{ animal.name }}</h3>
   
@@ -118,25 +118,25 @@
     </div>
 
     <div class="animal">
-      {{ filteredAnimals.length }} Rescue Animal{{ filteredAnimals.length !== 1 ? '\'s' : '' }} found
+      {{ animals.length }} Rescue Animal{{ animals.length !== 1 ? '\'s' : '' }} found
     </div>
   
 
     <div class="pagination">
-      <button (click)="currentPage = currentPage - 1" [disabled]="currentPage === 1">
+      <button (click)="prevPage()" [disabled]="currentPage === 1">
         &laquo; Prev
       </button>
 
-      <span> Page {{ currentPage }} of {{ totalPages }} </span>
+      <span> Page {{ currentPage }} </span>
  
-      <button (click)="currentPage = currentPage + 1" [disabled]="currentPage === totalPages">
+      <button (click)="nextPage()" [disabled]="animals.length < itemsPerPage">
         Next &raquo; 
       </button>
     </div>
 
   </div>
 
-  <div *ngIf="animals && filteredAnimals.length === 0">
+  <div *ngIf="animals && animals.length === 0">
   <p>No animals to display.</p>
   </div>
 
