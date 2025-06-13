@@ -261,9 +261,9 @@
       <h3>Original Linear Search Example:</h3>
 
       <pre><code>
-        for (Animal animal : animalList) {
-          if (animal.getType().equals("Dog") && animal.getTrainingStatus().equals("In Service")) {
-            // Add to result list
+        for (Dog dog : dogList) {
+          if (dog.getTrainingStatus().equalsIgnoreCase("in service") && !dog.getReserved()) {
+            availableList.add(dog);
           }
         }
       </code></pre>
