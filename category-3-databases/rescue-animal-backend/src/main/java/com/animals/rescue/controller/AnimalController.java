@@ -8,9 +8,9 @@ import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.mongodb.core.MongoTemplate;
-import org.springframework.data.domain.Sort;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.data.domain.PageRequest;
 
 import java.util.List;
 import java.util.Arrays;
@@ -68,7 +68,7 @@ public class AnimalController {
         return animalService.getAvailableAnimals(type);
     }
 
-    // Get animals matchign filters
+    // Get animals matching filters
     @GetMapping("/filter")
     public List<Animal> filterAnimals(
         @RequestParam(required = false) String types,
@@ -76,7 +76,9 @@ public class AnimalController {
         @RequestParam(required = false) Integer ageMin,
         @RequestParam(required = false) Integer ageMax,
         @RequestParam(required = false) Boolean available,
-        @RequestParam(required = false) String sortBy
+        @RequestParam(required = false) String sortBy,
+        @RequestParam(defaultValue = "0") int page,
+        @RequestParam(defaultValue = "6") int pageSize
     ) {
         Query query = new Query();
 
@@ -138,6 +140,11 @@ public class AnimalController {
                 case "ageDesc" -> query.with(Sort.by(Sort.Direction.DESC, "age"));
             }
         }
+
+        // Pagination
+        query.with(PageRequest.of(page, pageSize));
+
+
         // run query and return filtered results
         return mongoTemplate.find(query, Animal.class);
     }

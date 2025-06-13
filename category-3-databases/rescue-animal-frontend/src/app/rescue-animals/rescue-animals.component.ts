@@ -39,15 +39,6 @@ export class RescueAnimalsComponent implements OnInit {
   currentPage: number = 1;
   itemsPerPage: number = 6;
 
-  get paginatedAnimals(): Animal[] {
-    const start = (this.currentPage - 1) * this.itemsPerPage;
-    const end = start + this.itemsPerPage;
-    return this.filteredAnimals.slice(start, end);
-  }
-
-  get totalPages(): number {
-    return Math.ceil(this.filteredAnimals.length / this.itemsPerPage);
-  }
 
   constructor(
     private animalService: AnimalService,
@@ -56,7 +47,7 @@ export class RescueAnimalsComponent implements OnInit {
 
   // Run once when the component loads
   ngOnInit(): void {
-    this.loadAnimals();
+    this.applyFilters();
     this.checkLoginStatus();
   }
 
@@ -128,12 +119,16 @@ export class RescueAnimalsComponent implements OnInit {
       delete queryParams.sortBy;
     }
 
+    // Pagination
+    queryParams.page = this.currentPage - 1;
+    queryParams.pageSize = this.itemsPerPage;
+
     this.animalService.getFilteredAnimals(queryParams).subscribe({
       next: (data) => {
         this.animals = data;
       },
       error: () => {
-        this.errorMessage = 'Failed to apply filters.';
+        this.errorMessage = 'Failed to load animals.';
       }
     });
 
@@ -172,14 +167,6 @@ export class RescueAnimalsComponent implements OnInit {
     this.isAdmin = !!token;  // Set to true if token exists
   }
 
-  // Return animals that match the selected type
-  get filteredAnimals(): Animal[] {
-    if (this.selectedType === 'all') {
-      return this.animals;
-    }
-    return this.animals.filter(animal => animal.type === this.selectedType);
-  }
-
   // Expand or collapse animal card
   toggleDetails(index: number): void {
     this.expandedCardIndex = this.expandedCardIndex === index ? null : index;
@@ -201,5 +188,18 @@ export class RescueAnimalsComponent implements OnInit {
 
   editAnimal(animal: Animal): void {
     this.router.navigate(['/edit-animal', animal.id]);
+  }
+
+  // Pagination controls
+  nextPage(): void {
+    this.currentPage++;
+    this.applyFilters();
+  }
+
+  prevPage(): void {
+    if (this.currentPage > 1) {
+      this.currentPage--;
+      this.applyFilters();
+    }
   }
 }
