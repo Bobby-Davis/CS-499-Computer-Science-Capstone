@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
-    <title>Bobby Davis - ePortfolio</title>
+    <title>Bobby Davis - ePortfolio - Home</title>
     <link rel="stylesheet" href="ePortfolio.css">
   </head>
+
   <body>
 
     <header>
@@ -11,24 +13,23 @@
       <h3>Software Engineer</h3>
       <h2>ePortfolio</h2>
       <h3>CS-499 Computer Science Capstone</h3>
-    
     </header>
 
     <!-- Navigation links to trigger section swaps -->
     <div class="nav-wrapper">
       <nav>
-        <a href="#javascript:void(0)" data-section="home">Home</a>
-        <a href="#javascript:void(0)" data-section="code-review">Code Review</a> 
-        <a href="#javascript:void(0)" data-section="category1">Software Engineering and Design</a> 
-        <a href="#javascript:void(0)" data-section="category2">Algorithms and Data Structures</a> 
-        <a href="#javascript:void(0)" data-section="category3">Databases</a>
+        <a href="ePortfolio.html">Home</a>
+        <a href="code-review.html">Code Review</a> 
+        <a href="software-engineering-design.html">Software Engineering and Design</a> 
+        <a href="algorithms-data-structures.html">Algorithms and Data Structures</a> 
+        <a href="databases.html">Databases</a>
       </nav>
     </div>
 
     <main>
       <!-- PROFESSIONAL SELF-ASSESSMENT -->
 
-      <section id="home" class="section active">
+      <section>
         <h2>Welcome</h2>
         <p>
           My name is Bobby Davis, and I am a passionate and goal-oriented software engineer with a strong foundation
@@ -94,365 +95,8 @@
 
       </section>
   
-
-
-
-
-      <!-- CODE REVIEW SECTION -->
-      <section id="code-review" class="section">
-        <h2>Code Review</h2>
-  
-        <p>
-          A code review is a systematic process in which developers examine each other's code to identify bugs,
-          improve code quality, and ensure that the codebase meets industry standards. It promotes collaboration,
-          encourages learning, and helps catch issues early before they become costly problems in production.
-          Code reviews are an essential part of professional software development workflows, used in both open-source
-          and enterprise teams.
-        </p>
-  
-        <p>
-          The benefits of a code review include improved readability, better maintainability, consistency in coding style,
-          and increased overall reliability of software. It also serves as an opportunity for knowledge sharing and mentoring,
-          making teams more resilient and aligned in their practices.
-        </p>
-  
-        <p>
-          In the video below, I walk through the original version of my Rescue Animal Management System, a Java-based console program.
-          I then explain the structured enhancements I implemented as part of my CS 499 Capstone Project. These enhancements showcase 
-          my skills in software engineering, algorithm design, and full-stack web development using Angular, Spring Boot, and MongoDB.
-          I highlight specific code improvements, architectural decisions, and technical challenges I solved during the transformation
-          of the system into a web application.
-        </p>
-  
-        <!-- Code Review Video (youtube link) -->
-        <iframe width="100%" height="450" 
-          src="https://www.youtube.com/embed/lfZujDgJ_nw" 
-          title="Code Review – Rescue Animal Management System"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen>
-        </iframe>
-  
-        <h2>Key Enhancements</h2>
-        <ul>
-          <li>Redesigned the UI using Angular for a modern, responsive interface</li>
-          <li>Implemented advanced filtering, sorting, and pagination logic</li>
-          <li>Integrated a secure RESTful API with Spring Boot and JWT-based authentication</li>
-          <li>Utilized MongoDB to store and query dynamic animal data efficiently</li>
-        </ul>
-      </section>
-
-
-
-
-
-
-      <!-- SOFTWARE ENGINEERING AND DESIGN SECTION -->
-
-      <section id="category1" class="section">
-        <h2>Category 1: Software Engineering and Design</h2>
-  
-        <p>
-          The artifact I selected for enhancement is my Rescue Animal Management System, originally developed as a Java-based console 
-          application for the IT-145 course. The program allowed users to intake, reserve, and list rescue dogs and monkeys, storing animal 
-          data in memory using ArrayList. While it worked for a console environment, it was very limited. It had no real database,
-          no user interface, and no way to use the application outside of development environments.
-        </p>
-
-        <img src="images/original-java-console.png" alt="Original Java console application" class="original-screenshot">
-
-        <p>
-          For this course, I chose to significantly enhance this artifact by transforming it into a full-stack web application. I developed a multi-layers system 
-          that includes:
-        </p> 
-
-        <ul class="listing-group">
-          <li>Spring Boot (java) for backend REST API.</li>
-          <li>MongoDB as a persistent database.</li>
-          <li>Angular for the frontend user interface.</li>
-        </ul>
-
-        <p>
-          The result is a fully interactive and responsive application where 
-          users can view, filter, and manage rescue animals through a modern web interface.
-        </p>
-          
-        <div class="animal-list-image-stack">
-          <div>
-            <h3>Angular Frontend Animal List View</h3>
-            <img src="images/angular-animal-list.png" alt="Angular frontend animal list view" class="animal-list-screenshot">
-          </div>
-          <div>
-            <h3>Mobile Angular Frontend Animal List View</h3>
-            <img src="images/angular-animal-list2.png" alt="Mobile Angular frontend animal list view" class="mobile-animal-list-screenshot">
-          </div>
-        </div>
-          
-          Admin users can log in to manage animals by adding new ones, updating their details, or removing them from the lists.
-          This new version can be used from any device with a browser and stores all data in a real database instead of memory.
-        </p>
-        
-        <p>
-          I chose to include this artifact in my ePortfolio because it showcases both my growth and current capabilities in software design, full-stack development,
-          RESTful APIs, and database management. The project brings together everything I've learned about frontend design, backend development, database storage,
-          and application security. I built a secure backend with Spring Boot that exposes REST API endpoints. 
-        </p>
-          
-          <div class="springboot-image-stack">
-              <img src="images/springboot-controller1.png" alt="Spring Boot controller code1" >
-              <img src="images/springboot-controller2.png" alt="Spring Boot controller code2" >
-          </div>
-
-        <p>
-          I connected that to an Angular frontend where users  can interact with the data. I also added a login system that uses JWT (JSON Web Tokens) and encrypted
-          passwords with BCrypt so only admins can make changes to the animal list.
-
-          <img src="images/new-app-login.png" alt="New App Login" class="login-screenshot">
-          
-          I changed the code so that dogs and monkeys are now handled through one flexible Animal class,
-          which makes the project easier to expand if we want to add more animals in the future.
-        </p>
-  
-        <p>
-          The artifact directly supports the course outcome related to software engineering, software design, and databases. It shows that I can build an organized, 
-          layered backend, interact with a database, and create a frontend that communicates securely with the backend. I followed the enhancement plan I submitted earlier 
-          in the course and have completed the upgrades as planned, so there are no changes needed to my plan. I also made progress on outcomes relating to secure 
-          development practices.
-        </p>
-  
-        <p>
-          Working on this project taught me a lot about how real applications are built. I learned how to connect the frontend and backend through API calls 
-          and how to send and verify JWT tokens to protect certain features. I learned how to handle CORS issues, how to upload and display images using Angular 
-          and Spring Boot, and how to make the user interface more compact and organized. It wasn't as easy as I thought it would be. One of the biggest challenges 
-          I faced was getting the authentication system to work properly and making sure that only admins could perform certain actions. I also had trouble at first 
-          getting images to upload and display correctly from the database but eventually solved the problem by improving how the data was stored and retrieved. As
-           I made progress, I also spent time cleaning up the frontend layout to reduce spacing and improve the look and feel of the animal cards.
-        </p>
-  
-        <p>
-          This enhancement turned a basic, text-based Java program into a complete, real-world application that could actually be used by a rescue organization.
-          It demonstrates my skills in full-stack development, software design, and secure coding. More importantly, it shows my ability to take something simple 
-          and build it into something much more powerful and user-friendly. That's why I'm proud to include this project in my ePortfolio as a reflection of my skills, 
-          my growth, and my ability to deliver professional-quality work.
-        </p>
-
-        <img src="images/new-app-home.png" alt="New Application Home" class="home-screenshot">
-      </section>
-
-
-
-
-
-
-
-      <!-- ALGORITHMS AND DATA STRUCTURES SECTION -->
-
-      <section id="category2" class="section">
-        <h2>Category 2: Algorithms and Data Structures</h2>
-
-
-      <p>
-        The artifact I selected for this milestone is a full-stack web application originally developed as a console-based 
-        Java Program for managing rescue animals. The original program used arrays and procedural logic to handle user input 
-        and manage animal data entirely in memory using ArrayLists. Each operation required manual iteration through lists 
-        using basic for-loops, which resulted in O(n) time complexity for searching and filtering operations.
-      </p>
-
-      <p>
-        To align with the Algorithms and Data Structures category, I enhanced the application by adding dynamic filtering, 
-        sorting, and efficient querying capabilities. The updated version stores animal records in MongoDB, uses Spring Boot 
-        for the backend, and Angular for the frontend. Filtering logic was redesigned to use database queries instead of in-memory 
-        loops, allowing multiple filters such as animal type, size, age range, and availability, along with sorting options.
-      </p>
-
-      <h3>Filtering Enhancements</h3>
-
-      <p>
-        Originally, searching for animals involved scanning each item in the list manually, which becomes inefficient for large datasets. 
-        In the enhanced version, this is replaced by MongoDB queries using indexed fields, significantly improving query time to O(log n) 
-        or even O(1) for simple lookups. The filtering system was implemented using checkboxes and numerical inputs that dynamically 
-        update query parameters sent to the backend. The backend constructs MongoDB queries based on active filters, validating parameters 
-        before building the query to avoid conflicting filters.
-      </p>
-
-      <h3>Original Linear Search Example:</h3>
-
-      <pre><code>
-        for (Dog dog : dogList) {
-          if (dog.getTrainingStatus().equalsIgnoreCase("in service") && !dog.getReserved()) {
-            availableList.add(dog);
-          }
-        }
-      </code></pre>
-
-
-      <h3>Enhanced MongoDB Filtering:</h3>
-
-      <div class="filter-code-stack">
-        <img src="images/enhanced-query1.png" alt="Filter1 Code">
-        <img src="images/enhanced-query2.png " alt="Filter2 Code">
-      </div>
-
-      <h3>Sorting Enhancements</h3>
-
-      <p>
-        Originally, animals were displayed in the order they were added, with no sorting options. In the enhanced version, sorting is implemented 
-        using Spring Data's Sort object. Users select sorting options from a dropdown, which are passed to the backend where sorting is applied 
-        directly in the MongoDB query.
-      </p>
-
-      <img src="images/enhanced-sorting-code.png " alt="Sort Code" class="sorting-code-screenshot">
-
-      
-
-      <h3>Pagination and Reset</h3>
-
-      <p>
-        Pagination was added to keep the frontend responsive by limiting results displayed per page. A reset button allows users to clear all filters 
-        and start fresh.
-      </p>
-
-
-      <h3>Enhancement Pagination Backend Code:</h3>
-
-      <img src="images/pagination1.png" alt="Pagination Code" class="pagination-code-screenshot">
-
-      <h3>Real-World Problem Solving</h3>
-
-      <p>
-        During development, I encountered issues with overlapping filter conditions when multiple filters were active at the same time. The backend 
-        received conflicting query parameters, resulting in unpredictable results. I solved this by restructuring the query building logic to validate 
-        each parameter individually before applying it to the MongoDB query. This greatly improved both the stability and scalability of the filtering system.
-      </p>
-
-      <h3>UI with Enhancements</h3>
-
-      <div class="filtering-image-stack">
-        <img src="images/rescue-animals.png" alt="Rescue Animals Page">
-        <img src="images/rescue-animals-filter.png" alt="Filtering Rescue Animals">
-        <img src="images/rescue-animals-sorted.png" alt="Sorting Rescue Animals">
-      </div>
-
-      <h3>Course Outcomes Demonstrated</h3>
-
-      <p>
-        This enhancement supports course outcome 3 by applying algorithmic thinking to improve data filtering, sorting, and searching. It also supports course 
-        outcome 4 by applying professional tools like MongoDB, Spring Boot, and Angular to create a modern, efficient, and scalable system.
-      </p>
-      </section>
-
-
-
-      
-      <!-- DATABASES SECTION -->
-
-      <section id="category3" class="section">
-        <h2>Category 3: Databases</h2>
-
-        <p>
-          The artifact I selected for this milestone is the same Rescue Animal Management System that I enhanced for Categories 1 and 2. 
-          It originally began as a Java-based console application developed in my IT-145 course. In that version, all animal records were stored 
-          temporarily in memory using ArrayLists. This meant that any time the program was closed, all data was lost. There was no true database or 
-          data persistence in place. Just temporary data structures used during runtime. While this allowed basic intake and reservation of rescue dogs 
-          and monkeys, it was not suitable for real-world use where data integrity and long-term storage are required.
-        </p>
-
-        <h4>Original Application Screenshot (Console-based):</h4>
-
-
-        <p>
-          To align with the Databases category, I enhanced the program by implementing a proper data persistence layer using MongoDB, a document-oriented 
-          NoSQL database. I used Spring Data MongoDB to map Java objects directly to MongoDB documents. I also redesigned the backend model structure by 
-          creating a unified Animal model that allows both dogs and monkeys to be stored together in a single collection. This made the system more flexible 
-          and scalable.
-        </p>
-        <p>
-          The Repository interface provides an abstraction layer that allows my application to communicate with MongoDB using standard method definitions,
-          eliminating the need to write raw queries.
-        </p>
-
-        <h4>Spring Boot Repository Interface </h4>
-
-        <img src="images/spring-boot-repository-code.png" alt="Repository code">
-
-        <p>
-          Now, instead of losing data when the program stops, all animal information is permanently stored in the database and can be retrieved, updated, 
-          or queried across sessions and devices. The backend communicates directly with MongoDB to perform full CRUD operations.
-        </p>
-
-        <h4>MongoDB Animal Collection View:</h4>
-
-        <img src="images/mongodb-animal-collection.png" alt="MongoDB Compass Animal Collection">
-
-
-        <h4>Spring Boot Animal Model Code Sample:</h4>
-
-        <img src="images/springboot-animal-model-code.png" alt="Animal Model Code">
-
-        <p>
-          I chose to include this artifact in my ePortfolio because it demonstrates my ability to design and integrate a real-world database into a full-stack 
-          system. It shows my understanding of data modeling, how to map Java objects to MongoDB documents, and how to handle important database concerns like 
-          validation, structure, and security.
-        </p>
-
-        <p>
-          During development, I encountered several challenges that I successfully solved. One issue involved how MongoDB handles ObjectId values. Originally, 
-          mismatches between ObjectId and String types created issues when retrieving or updating records. I resolved this by standardizing IDs as String throughout 
-          the entire full-stack system, ensuring consistency between the frontend (Angular) and backend (Spring Boot).
-        </p>
-
-        <p>
-          Another challenge was handling validation properly before storing records in MongoDB. Because MongoDB is schema-less, I used Spring Boot validation 
-          annotations such as @NotBlank, @Size, and others to ensure all incoming data was valid before being inserted into the database. I also implemented proper 
-          exception handling to display useful error messages when invalid data was submitted.
-        </p>
-
-        <h4>Application Frontend Showing Data Persisted from MongoDB:</h4>
-
-        <img src="images/frontend-data-from-mongodb.png" alt="Data Populated from MongoDB">
-
-        <p>
-          This enhancement directly supports Course Outcome 3 by demonstrating my ability to evaluate storage solutions and implement scalable databases. 
-          It supports Course Outcome 4 by applying innovative modern tools like MongoDB, Spring Boot, and Spring Data. It also demonstrates Course Outcome 5 by 
-          focusing on secure data storage, validation, and integrity protection.
-        </p>
-        
-        <p>
-          Overall, this enhancement transformed my application from a short-lived, memory-based program into a durable, full-stack, data-driven system that is 
-          scalable, reliable, and secure. It demonstrates my ability to build persistent systems that handle real-world data challenges and to design robust solutions 
-          using modern full-stack technologies.
-        </p>
-
-        <h4>Rescue Animals Page with Persistent Data:</h4>
-
-        <img src="images/our-rescue-animals-page.png" alt="Our Rescue Animals Page">
-
-      </section>
       
     </main>
-  
-    <!-- Handles Page-Like content Swapping -->
-    <script>
-      // Get all nav links and section elements
-      const links = document.querySelectorAll('a[data-section]');
-      const sections = document.querySelectorAll('.section');
-  
-      // Loop through each nav link
-      links.forEach(link => {
-        link.addEventListener('click', e => {
-          e.preventDefault();  // Prevents page jump
-  
-          // Get the value of the data-section attribute
-          const target = link.getAttribute('data-section');
-  
-          // Hide all sections
-          sections.forEach(sec => sec.classList.remove('active'));
-  
-          // Show the selected section
-          document.getElementById(target).classList.add('active');
-        });
-      });
-  
-    </script>
+
   </body>
 </html>
