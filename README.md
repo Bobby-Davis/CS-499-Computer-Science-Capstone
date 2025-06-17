@@ -8,6 +8,23 @@ Each enhancement aligns with a specific area of the computer science program out
 
 ---
 
+## Code Review 
+
+A code review is a structured process where developers review and evaluate source code to ensure it meets coding standards, design principles, and best practices. The goal of a code review is to:
+- Identify bugs, logic errors, or security vulnerabilities early in development
+- Ensure the code is clean, readable, and maintainable for future developers
+- Verify that the code follows proper design patterns and architectural principles
+- Share knowledge among team members and promote continuous learning
+
+Code reviews help improve overall code quality, reduce long-term maintenance costs, and create more reliable, secure, and scalable software systems. 
+
+The Code review video provides an in-depth walkthrough of the original Java console application, and the enhancements applied throughout the project. The video highlights improvements made across software engineering, algorithms and data structures, and database integration
+
+You can watch the full code review video here:
+[Watch Code Review Video](https://www.youtube.com/watch?v=lfZujDgJ_nw)
+
+---
+
 ## Category 1: Software Engineering and Design
 
 **Folder:** `category-1-software-engineering-design`
