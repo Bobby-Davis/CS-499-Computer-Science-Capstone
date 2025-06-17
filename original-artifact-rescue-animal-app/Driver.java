@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Driver {
-	//Lists to store dogs, monkeys, and availale animals
+	//Lists to store dogs, monkeys, and available animals
     private static ArrayList<Dog> dogList = new ArrayList<>();
     private static ArrayList<Monkey> monkeyList = new ArrayList<>();
     // Instance variables (if needed)

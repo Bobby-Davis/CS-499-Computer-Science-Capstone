@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bobby Davis - ePortfolio - Algorithms and Data Structures</title>
+  <link rel="stylesheet" href="ePortfolio.css">
+</head>
+<body>
+
+    <header>
+      <h1>Bobby Davis</h1>
+      <h3>Software Engineer</h3>
+      <h2>ePortfolio</h2>
+      <h3>CS-499 Computer Science Capstone</h3>
+    </header>
+
+    <div class="nav-wrapper">
+      <nav>
+          <a href="ePortfolio.html">Home</a>
+          <a href="code-review.html">Code Review</a> 
+          <a href="software-engineering-design.html">Software Engineering and Design</a> 
+          <a href="algorithms-data-structures.html">Algorithms and Data Structures</a> 
+          <a href="databases.html">Databases</a>
+      </nav>
+    </div>
+
+      <!--ALGORITHMS AND DATA STRUCTURES-->
+
+    <main>
+        <h2>Category 2: Algorithms and Data Structures</h2>
+
+
+      <p>
+        The artifact I selected for this milestone is a full-stack web application originally developed as a console-based 
+        Java Program for managing rescue animals. The original program used arrays and procedural logic to handle user input 
+        and manage animal data entirely in memory using ArrayLists. Each operation required manual iteration through lists 
+        using basic for-loops, which resulted in O(n) time complexity for searching and filtering operations.
+      </p>
+
+      <p>
+        To align with the Algorithms and Data Structures category, I enhanced the application by adding dynamic filtering, 
+        sorting, and efficient querying capabilities. The updated version stores animal records in MongoDB, uses Spring Boot 
+        for the backend, and Angular for the frontend. Filtering logic was redesigned to use database queries instead of in-memory 
+        loops, allowing multiple filters such as animal type, size, age range, and availability, along with sorting options.
+      </p>
+
+      <h3>Filtering Enhancements</h3>
+
+      <p>
+        Originally, searching for animals involved scanning each item in the list manually, which becomes inefficient for large datasets. 
+        In the enhanced version, this is replaced by MongoDB queries using indexed fields, significantly improving query time to O(log n) 
+        or even O(1) for simple lookups. The filtering system was implemented using checkboxes and numerical inputs that dynamically 
+        update query parameters sent to the backend. The backend constructs MongoDB queries based on active filters, validating parameters 
+        before building the query to avoid conflicting filters.
+      </p>
+
+      <h3 class="image-text">Original Linear Search Example:</h3>
+
+      <pre><code>
+        for (Dog dog : dogList) {
+          if (dog.getTrainingStatus().equalsIgnoreCase("in service") && !dog.getReserved()) {
+            availableList.add(dog);
+          }
+        }
+      </code></pre>
+
+
+      <h3 class="image-text">Enhanced MongoDB Filtering:</h3>
+
+      <div class="filter-code-stack">
+        <img src="images/enhanced-query1.png" alt="Filter1 Code">
+        <img src="images/enhanced-query2.png " alt="Filter2 Code">
+      </div>
+
+      <h3>Sorting Enhancements</h3>
+
+      <p>
+        Originally, animals were displayed in the order they were added, with no sorting options. In the enhanced version, sorting is implemented 
+        using Spring Data's Sort object. Users select sorting options from a dropdown, which are passed to the backend where sorting is applied 
+        directly in the MongoDB query.
+      </p>
+
+      <img src="images/enhanced-sorting-code.png " alt="Sort Code" class="sorting-code-screenshot">
+
+      
+
+      <h3>Pagination and Reset</h3>
+
+      <p>
+        Pagination was added to keep the frontend responsive by limiting results displayed per page. A reset button allows users to clear all filters 
+        and start fresh.
+      </p>
+
+
+      <h3 class="image-text">Enhancement Pagination Backend Code:</h3>
+
+      <img src="images/pagination1.png" alt="Pagination Code" class="pagination-code-screenshot">
+
+      <h3>Real-World Problem Solving</h3>
+
+      <p>
+        During development, I encountered issues with overlapping filter conditions when multiple filters were active at the same time. The backend 
+        received conflicting query parameters, resulting in unpredictable results. I solved this by restructuring the query building logic to validate 
+        each parameter individually before applying it to the MongoDB query. This greatly improved both the stability and scalability of the filtering system.
+      </p>
+
+      <h3 class="image-text">UI with Enhancements</h3>
+
+      <div class="filtering-image-stack">
+        <h5>Rescue Animal Page No Filter Applied</h5> 
+        <img src="images/rescue-animals.png" alt="Rescue Animals Page">
+
+        <h5>Rescue Animal Page Dog and Medium Filter Applied</h5> 
+        <img src="images/rescue-animals-filter.png" alt="Filtering Rescue Animals">
+
+        <h5>Rescue Animal Page Alphabetical Sort Applied</h5> 
+        <img src="images/rescue-animals-sorted.png" alt="Sorting Rescue Animals">
+      </div>
+
+      <h3>Course Outcomes Demonstrated</h3>
+
+      <p>
+        This enhancement supports course outcome 3 by applying algorithmic thinking to improve data filtering, sorting, and searching. It also supports course 
+        outcome 4 by applying professional tools like MongoDB, Spring Boot, and Angular to create a modern, efficient, and scalable system.
+      </p>
+    </main>
+
+</body>
+</html>

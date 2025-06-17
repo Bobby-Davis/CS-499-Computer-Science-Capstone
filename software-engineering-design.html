@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Bobby Davis - ePortfolio - Software Engineering and Design</title>
+    <link rel="stylesheet" href="ePortfolio.css">
+  </head>
+  <body>
+
+    <header>
+      <h1>Bobby Davis</h1>
+      <h3>Software Engineer</h3>
+      <h2>ePortfolio</h2>
+      <h3>CS-499 Computer Science Capstone</h3>
+    </header>
+
+    <!-- Navigation links to trigger section swaps -->
+    <div class="nav-wrapper">
+      <nav>
+        <a href="ePortfolio.html">Home</a>
+        <a href="code-review.html">Code Review</a> 
+        <a href="software-engineering-design.html">Software Engineering and Design</a> 
+        <a href="algorithms-data-structures.html">Algorithms and Data Structures</a> 
+        <a href="databases.html">Databases</a>
+      </nav>
+    </div>
+
+
+
+      <main>
+        <h2>Category 1: Software Engineering and Design</h2>
+  
+        <p>
+          The artifact I selected for enhancement is my Rescue Animal Management System, originally developed as a Java-based console 
+          application for the IT-145 course. The program allowed users to intake, reserve, and list rescue dogs and monkeys, storing animal 
+          data in memory using ArrayList. While it worked for a console environment, it was very limited. It had no real database,
+          no user interface, and no way to use the application outside of development environments.
+        </p>
+
+        <img src="images/original-java-console.png" alt="Original Java console application" class="original-screenshot">
+
+        <p>
+          For this course, I chose to significantly enhance this artifact by transforming it into a full-stack web application. I developed a multi-layers system 
+          that includes:
+        </p> 
+
+        <ul class="listing-group">
+          <li>Spring Boot (java) for backend REST API.</li>
+          <li>MongoDB as a persistent database.</li>
+          <li>Angular for the frontend user interface.</li>
+        </ul>
+
+        <p>
+          The result is a fully interactive and responsive application where 
+          users can view, filter, and manage rescue animals through a modern web interface.
+        </p>
+          
+        <div class="animal-list-image-stack">
+          <div>
+            <h3 class="image-text">Angular Frontend Animal List View</h3>
+            <img src="images/angular-animal-list.png" alt="Angular frontend animal list view" class="animal-list-screenshot">
+          </div>
+          <div>
+            <h3 class="image-text">Mobile Angular Frontend Animal List View</h3>
+            <img src="images/angular-animal-list2.png" alt="Mobile Angular frontend animal list view" class="mobile-animal-list-screenshot">
+          </div>
+        </div>
+          
+          Admin users can log in to manage animals by adding new ones, updating their details, or removing them from the lists.
+          This new version can be used from any device with a browser and stores all data in a real database instead of memory.
+        </p>
+        
+        <p>
+          I chose to include this artifact in my ePortfolio because it showcases both my growth and current capabilities in software design, full-stack development,
+          RESTful APIs, and database management. The project brings together everything I've learned about frontend design, backend development, database storage,
+          and application security. I built a secure backend with Spring Boot that exposes REST API endpoints. 
+        </p>
+          
+          <div class="springboot-image-stack">
+              <img src="images/springboot-controller1.png" alt="Spring Boot controller code1" >
+              <img src="images/springboot-controller2.png" alt="Spring Boot controller code2" >
+          </div>
+
+        <p>
+          I connected that to an Angular frontend where users  can interact with the data. I also added a login system that uses JWT (JSON Web Tokens) and encrypted
+          passwords with BCrypt so only admins can make changes to the animal list.
+
+          <img src="images/new-app-login.png" alt="New App Login" class="login-screenshot">
+          
+          I changed the code so that dogs and monkeys are now handled through one flexible Animal class,
+          which makes the project easier to expand if we want to add more animals in the future.
+        </p>
+  
+        <p>
+          The artifact directly supports the course outcome related to software engineering, software design, and databases. It shows that I can build an organized, 
+          layered backend, interact with a database, and create a frontend that communicates securely with the backend. I followed the enhancement plan I submitted earlier 
+          in the course and have completed the upgrades as planned, so there are no changes needed to my plan. I also made progress on outcomes relating to secure 
+          development practices.
+        </p>
+  
+        <p>
+          Working on this project taught me a lot about how real applications are built. I learned how to connect the frontend and backend through API calls 
+          and how to send and verify JWT tokens to protect certain features. I learned how to handle CORS issues, how to upload and display images using Angular 
+          and Spring Boot, and how to make the user interface more compact and organized. It wasn't as easy as I thought it would be. One of the biggest challenges 
+          I faced was getting the authentication system to work properly and making sure that only admins could perform certain actions. I also had trouble at first 
+          getting images to upload and display correctly from the database but eventually solved the problem by improving how the data was stored and retrieved. As
+           I made progress, I also spent time cleaning up the frontend layout to reduce spacing and improve the look and feel of the animal cards.
+        </p>
+  
+        <p>
+          This enhancement turned a basic, text-based Java program into a complete, real-world application that could actually be used by a rescue organization.
+          It demonstrates my skills in full-stack development, software design, and secure coding. More importantly, it shows my ability to take something simple 
+          and build it into something much more powerful and user-friendly. That's why I'm proud to include this project in my ePortfolio as a reflection of my skills, 
+          my growth, and my ability to deliver professional-quality work.
+        </p>
+
+        <img src="images/new-app-home.png" alt="New Application Home" class="home-screenshot">
+    </main>
+      
+    </body>
+</html>
