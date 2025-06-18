@@ -1,4 +1,4 @@
-Milestone Two Narrative: Software Design and Engineering Enhancement
+##Milestone Two Narrative: Software Design and Engineering Enhancement
 
 The artifact I selected for enhancement is my Rescue Animal Management System, originally developed as a Java-based console application for the IT-145 course. The program allowed users to intake, reserve, and list rescue dogs and monkeys, storing animal data in memory using ArrayList. While it worked for a console environment, it was very limited. It had no real database, no user interface, and no way to use the application outside of development environments.
 
