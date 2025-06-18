@@ -88,3 +88,20 @@ Throughout the application, security and data integrity are key focuses. The bac
 ## Summary
 
 This project demonstrates my ability to evolve a basic Java console application into a full-featured, database-driven web application. It showcases my growth in software development, problem-solving, secure coding, and real-world application design. I am proud to present this work as the culmination of my undergraduate studies in computer science.
+
+## Enhancement Narratives and Documentation
+
+Each enhancement in this capstone project is supported by a detailed narrative that explains the motivation, implementation, and results of the improvements made in the areas of software design, algorithms and data structures, and database integration. These narratives reflect how the project aligns with key computer science course outcomes and provide insight into my problem-solving process and development decisions.
+
+You can read the full enhancement narratives here:
+- [Software Design and Engineering Narrative](./category-1-software-engineering-design/software_design_narrative.md)
+- [Algorithms and Data Structures](./category-2-algorithms-and-data-structures/algorithms_narrative.md)
+- [Databases](./category-3-databases/database_narrative.md)
+
+You can also view the complete source code for both versions of the project:
+- [Original Java Console-Based Application Narrative](./original-console-program)
+- [Enhanced Full-Stack Web Application Narrative](./enhanced-fullstack-application)
+
+To view the live ePortfolio site that showcases this capstone project, visit:  
+- [My ePortfolio](https://your-username.github.io/)
+
