@@ -16,11 +16,11 @@
     <!-- Navigation links to trigger section swaps -->
     <div class="nav-wrapper">
       <nav>
-        <a href="index.html">Home</a>
+        <a href="ePortfolio.html">Home</a>
         <a href="code-review.html">Code Review</a> 
-        <a href="software-engineering-design.html">Software Engineering and Design</a> 
+        <a href="software-design-engineering.html">Software Design and Engineering</a> 
         <a href="algorithms-data-structures.html">Algorithms and Data Structures</a> 
-        <a href="databases.html">Databases</a>
+        <a href="databases.html" class="active">Databases</a>
       </nav>
     </div>
 
@@ -76,11 +76,19 @@
           validation, structure, and security.
         </p>
 
+        <h3>Problem Solving</h3>
         <p>
           During development, I encountered several challenges that I successfully solved. One issue involved how MongoDB handles ObjectId values. Originally, 
-          mismatches between ObjectId and String types created issues when retrieving or updating records. I resolved this by standardizing IDs as String throughout 
-          the entire full-stack system, ensuring consistency between the frontend (Angular) and backend (Spring Boot).
+          mismatches between ObjectId and String types created issues when retrieving or updating records. Frontend initially expected a string ID, but 
+          MongoDB return an ObjectID, leading to mismatch errors. I resolved this by standardizing IDs as String throughout the entire full-stack system, 
+          ensuring consistency between the frontend (Angular) and backend (Spring Boot).
         </p>
+
+          <h5 class="image-text">MongoDB ObjectId</h5>
+          <img src="images/mongodb-objectid.png" alt="MongDB ObejectId">
+
+          <h5 class="image-text">IDs as String</h5>
+          <img src="images/angular-id-as-string.png" alt="Standardized IDs as String">
 
         <p>
           Another challenge was handling validation properly before storing records in MongoDB. Because MongoDB is schema-less, I used Spring Boot validation 
@@ -88,11 +96,18 @@
           exception handling to display useful error messages when invalid data was submitted.
         </p>
 
-        <h4 class="image-text">Application Frontend Showing Data Persisted from MongoDB:</h4>
+        <div class="image-stack">
+          <div>
+            <h5 class="image-text">Validation Code</h5>
+            <img src="images/validation-code.png" alt="Added validation">
+          </div>
+          <div>
+            <h5 class="image-text">Validation UI</h5>
+            <img src="images/validation-ui.png" alt="Validation UI">
+          </div>
+        </div>
 
-        <img src="images/frontend-data-from-mongodb.png" alt="Data Populated from MongoDB">
-
-        <h3>Course Outcomes Demonstrated</h3>
+        <h3>Course Outcomes</h3>
 
         <p>
           This enhancement directly supports Course Outcome 3 by demonstrating my ability to evaluate storage solutions and implement scalable databases. 
