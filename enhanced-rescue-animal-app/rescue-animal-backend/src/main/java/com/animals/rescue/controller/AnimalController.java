@@ -2,9 +2,13 @@ package com.animals.rescue.controller;
 
 import com.animals.rescue.model.Animal;
 import com.animals.rescue.service.AnimalService;
+
+import jakarta.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.mongodb.core.MongoTemplate;
@@ -13,12 +17,14 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.data.domain.PageRequest;
 
 import java.util.List;
+import java.util.Map;
+import java.util.HashMap;
 import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.Optional;
 
 
-
+@Validated
 @RestController
 @RequestMapping("/api/animals")
 @CrossOrigin(origins = "*")  // Allow calls from angular frontend
@@ -46,13 +52,13 @@ public class AnimalController {
 
     // Create new animal
     @PostMapping 
-    public Animal createAnimal(@RequestBody Animal animal) {
+    public Animal createAnimal(@Valid @RequestBody Animal animal) {
         return animalService.createAnimal(animal);
     }
 
     // Update animal
     @PutMapping("/{id}")
-    public Animal updateAnimal(@PathVariable String id, @RequestBody Animal animal) {
+    public Animal updateAnimal(@PathVariable String id, @Valid @RequestBody Animal animal) {
         return animalService.updateAnimal(id, animal);
     }
 
@@ -70,7 +76,7 @@ public class AnimalController {
 
     // Get animals matching filters
     @GetMapping("/filter")
-    public List<Animal> filterAnimals(
+    public Map<String, Object> filterAnimals(
         @RequestParam(required = false) String types,
         @RequestParam(required = false) String sizes,
         @RequestParam(required = false) Integer ageMin,
@@ -113,11 +119,11 @@ public class AnimalController {
             if (ageMin != null && ageMax != null) {
                 ageCriteria.gte(ageMin).lte(ageMax);
 
-            // if only min age is set, filter animasl with age greater or equal to min
+            // if only min age is set, filter animals with age greater or equal to min
             } else if (ageMin != null) {
                 ageCriteria.gte(ageMin);
 
-            // If only max age is set, filter animasl with age less than or equal to max
+            // If only max age is set, filter animals with age less than or equal to max
             } else if (ageMax != null) {
                 ageCriteria.lte(ageMax);
             }
@@ -141,11 +147,21 @@ public class AnimalController {
             }
         }
 
-        // Pagination
+        // Count total number of matching animals before applying pagination
+        long total = mongoTemplate.count(query, Animal.class);
+
+        // Apply Pagination
         query.with(PageRequest.of(page, pageSize));
 
+        // Execute the query with filters and pagination
+        List<Animal> animals = mongoTemplate.find(query, Animal.class);
 
-        // run query and return filtered results
-        return mongoTemplate.find(query, Animal.class);
+        // Prepare the response map containing bot the filtered data and total count
+        Map<String, Object> response = new HashMap<>();
+        response.put("content", animals);       // actual list of animals for the current page
+        response.put("totalElements", total);   // Total number of matching animals before pagination
+
+        // return both paginated animal data and total match count
+        return response;
     }
 }

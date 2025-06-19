@@ -1,6 +1,6 @@
 <h2>{{ mode === 'edit' ? 'Edit Rescue Animal' : 'Add New Rescue Animal' }}</h2>
 
-<form (ngSubmit)="onSubmit()" *ngIf="animal">
+<form #animalForm="ngForm" (ngSubmit)="onSubmit()" *ngIf="animal">
 
 
   <!-- Show image only in edit mode -->
@@ -15,9 +15,11 @@
     <p>{{ animal.id }}</p>
   </div>
 
+  <!-- Animal Name -->
   <div class="form-group">
     <label>Name:</label>
-    <input type="text" [(ngModel)]="animal.name" name="name" required placeholder="Enter animal name" />
+    <input type="text" [(ngModel)]="animal.name" name="name" required placeholder="Enter animal name" #nameInput="ngModel" />
+    <p *ngIf="nameInput.invalid && nameInput.touched" class="errorM">Name is required</p>
   </div>
 
   <!-- Animal Type -->
@@ -32,7 +34,7 @@
   <!-- Breed (Only for Dogs) -->
 <div *ngIf="animal.type === 'Dog'" class="form-group">
   <label>Breed:</label>
-  <select [(ngModel)]="selectedBreed" name="breed" (change)="onBreedChange()">
+  <select [(ngModel)]="selectedBreed" name="breed" (change)="onBreedSpeciesChange()">
     <option value="Labrador">Labrador</option>
     <option value="German Shepard">German Shepard</option>
     <option value="Pit Bull">Pit Bull</option>
@@ -49,7 +51,7 @@
 <!-- Species (Only for Monkeys) -->
 <div *ngIf="animal.type === 'Monkey'" class="form-group">
   <label>Species:</label>
-  <select [(ngModel)]="selectedBreed" name="breed" (change)="onBreedChange()">
+  <select [(ngModel)]="selectedBreed" name="breed" (change)="onBreedSpeciesChange()">
     <option value="Capuchin">Capuchin</option>
     <option value="Guenon">Guenon</option>
     <option value="Macaque">Macaque</option>
@@ -62,6 +64,7 @@
   <div *ngIf="selectedBreed === 'Other'" class="form-group">
     <label>Custom Species:</label>
     <input type="text" [(ngModel)]="customBreed" name="customSpecies" />
+    <p *ngIf="customBreed === '' && selectedBreed === 'Other'" class="errorM">Custom Breed is required</p>
   </div>
 </div>
 
@@ -147,4 +150,4 @@
 
 
 
-<p *ngIf="errorMessage" class="errorM" style="color: red;">{{ errorMessage }}</p>
+<p *ngIf="errorMessage" class="errorM" style="color: black;">{{ errorMessage }}</p>

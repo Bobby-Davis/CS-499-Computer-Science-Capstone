@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AnimalService, Animal } from '../services/animal.service';
 
+
 @Component({
   selector: 'app-edit-animal',
   standalone: true,
@@ -100,28 +101,41 @@ export class EditAnimalComponent implements OnInit {
   }
 
   // Handle breed dropdown changes (dog)
-  onBreedChange(): void {
-    this.animal.breedOrSpecies = this.selectedBreed === 'Other' ? this.customBreed : this.selectedBreed;
-  }
-
-  // Handle species dropdown changes (monkey)
-  onSpeciesChange(): void {
-    this.animal!.breedOrSpecies = this.selectedSpecies;
+  onBreedSpeciesChange(): void {
+    if (this.selectedBreed === 'Other') {
+      this.animal.breedOrSpecies = this.customBreed;
+    } else {
+      this.animal.breedOrSpecies = this.selectedBreed;
+    }
   }
 
   // Update the animal data in the backend
   onSubmit(): void {
-    this.onBreedChange(); // Sync breed/species before saving
+    this.onBreedSpeciesChange(); // Sync breed/species before saving
 
     if (this.mode === 'edit') {
       this.animalService.updateAnimal(this.animalId, this.animal).subscribe({
         next: () => this.router.navigate(['/rescue-animals']),  // Navigate back after successful update
-        error: () => this.errorMessage = 'Update failed.'
+        error: (err) => {
+          if (err.status === 400 && err.error) {
+            const messages = Object.values(err.error);
+            this.errorMessage = messages.join(', ');
+          } else {
+            this.errorMessage = 'Update failed.';
+          }
+        }
       });
     } else {
       this.animalService.addAnimal(this.animal).subscribe({
         next: () => this.router.navigate(['/rescue-animals']),
-        error: () => this.errorMessage = 'Add failed.'
+        error: (err) => {
+          if (err.status === 400 && err.error) {
+            const messages = Object.values(err.error);
+            this.errorMessage = messages.join(', ');
+          } else {
+            this.errorMessage = 'Add failed.';
+          }
+        }
       });
     }
   }

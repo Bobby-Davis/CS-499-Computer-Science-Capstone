@@ -20,6 +20,7 @@ export class RescueAnimalsComponent implements OnInit {
   errorMessage: string = '';            // Optional error message display
   sortBy: string = '';                  // Sorting 
   showFilters: boolean = true;
+  totalItems: number = 0;
 
   filterTypes = {
     Dog: false,
@@ -124,8 +125,9 @@ export class RescueAnimalsComponent implements OnInit {
     queryParams.pageSize = this.itemsPerPage;
 
     this.animalService.getFilteredAnimals(queryParams).subscribe({
-      next: (data) => {
-        this.animals = data;
+      next: (data: any) => {
+        this.animals = data.content;
+        this.totalItems = data.totalElements;
       },
       error: () => {
         this.errorMessage = 'Failed to load animals.';
@@ -154,9 +156,10 @@ export class RescueAnimalsComponent implements OnInit {
     this.ageMax = null;
     this.available = false;
     this.sortBy = '';
+    this.currentPage = 1;
 
     // Reload full animal list from backend
-    this.loadAnimals();
+    this.applyFilters();
 
     window.scrollTo(0,0);
   }

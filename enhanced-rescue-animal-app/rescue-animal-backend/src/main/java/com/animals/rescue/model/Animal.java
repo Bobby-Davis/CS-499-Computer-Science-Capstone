@@ -3,26 +3,59 @@ package com.animals.rescue.model;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import jakarta.validation.constraints.DecimalMin;
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
+
 @Document(collection = "animals")
 public class Animal {
     @Id
     private String id;
 
+    @NotBlank(message = "Name is required")
+    @Size(max = 30, message = "Name must be less than 30 characters")
     private String name;
+
+    @NotBlank(message = "Animal type is required")
     private String type;                //dog or monkey
+
+    @NotBlank(message = "Animal breed or species is required")
+    @Size(max = 50, message = "Breed or species must be less than 50 characters")
     private String breedOrSpecies;
+
+    @NotBlank(message = "Gender is required")    
     private String gender;
+
+    @Min(value = 0, message = "Age must be non-negative")
     private int age;
+
+    @DecimalMin(value = "0.1", message = "Weight must be greater than 0")
     private Float weight;
+
+    @NotBlank(message = "Acquisition date is required")
     private String acquisitionDate;
+
+    @NotBlank(message = "Training status is required")
     private String trainingStatus;
+
     private boolean reserved;
+
+    @NotBlank(message = "In-service location is required")
     private String inServiceLocation;
+
     private String image;
 
     // Monkey-specific fields
+
+
+    @DecimalMin(value = "0.0", inclusive = false, message = "Height must be positive")
     private Float height;
+
+    @DecimalMin(value = "0.0", inclusive = false, message = "Tail length must be positive")
     private Float tailLength;
+
+    @DecimalMin(value = "0.0", inclusive = false, message = "Body length must be positive")
     private Float bodyLength;
 
     // Constuctors
