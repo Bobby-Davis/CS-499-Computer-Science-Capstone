@@ -6,11 +6,11 @@ Throughout the program I think I’ve gained a strong foundation in building and
 
 The three most important concepts I’ve learned:
 
-* **Object-Oriented Programming (OOP):** Understanding how to organize code using classes, inheritance, and encapsulation helped me write programs that are easier to maintain and expand
+- **Object-Oriented Programming (OOP):** Understanding how to organize code using classes, inheritance, and encapsulation helped me write programs that are easier to maintain and expand
 
-* **Full-Stack Development:** Learning how to connect frontend and backend systems to work together using APIs and databases prepared me to build complete professional applications
+- **Full-Stack Development:** Learning how to connect frontend and backend systems to work together using APIs and databases prepared me to build complete professional applications
 
-* **Version Control with Git/GitHub:** Being able to track code changes, collaborate on projects, and manage repositories is a skill I will use in most software development jobs.
+- **Version Control with Git/GitHub:** Being able to track code changes, collaborate on projects, and manage repositories is a skill I will use in most software development jobs.
 
 
 I plan to demonstrate several important skills by turning my original console-based rescue animal program into a modern full stack web application. I will build a user-friendly interface using Angular, create a secure backend using Java with Spring Boot and use MongoDB to store animal records. This means the app will look and work more like something used in the real world.  
@@ -57,17 +57,17 @@ AnimalController:
 
 **How planned enhancement will demonstrate specific skills and align with course outcomes:**  
 
-* **Separation of Concerns (MVC Pattern):** dividing the app into layers (controller, service, repository) shows that I can organize code. This improves readability and makes it easier for teams to work together (outcome 1)  
-* **Using modern tools (Spring Boot & Angular):** these are tools used by developers currently. By using them in my enhancements, I’m showing that I can build industry standard applications (outcome 4)  
-* **RESTful API:** Creating clean, consistent APIs helps frontend and backend teams work well together. It also shows I can build systems that integrate easily with others. (outcome 2)  
-* **Frontend UI enhancements:** moving from command-line to a web app with forms and confirmations, I’m improving user experience, which makes the app more accessible (outcome 2)  
-* **Security Practices:** Adding route protection and input validation on forms show that I think of security when coding. (outcome 5)  
+- **Separation of Concerns (MVC Pattern):** dividing the app into layers (controller, service, repository) shows that I can organize code. This improves readability and makes it easier for teams to work together (outcome 1)  
+- **Using modern tools (Spring Boot & Angular):** these are tools used by developers currently. By using them in my enhancements, I’m showing that I can build industry standard applications (outcome 4)  
+- **RESTful API:** Creating clean, consistent APIs helps frontend and backend teams work well together. It also shows I can build systems that integrate easily with others. (outcome 2)  
+- **Frontend UI enhancements:** moving from command-line to a web app with forms and confirmations, I’m improving user experience, which makes the app more accessible (outcome 2)  
+- **Security Practices:** Adding route protection and input validation on forms show that I think of security when coding. (outcome 5)  
 
 **Course outcomes that enhancement will align with:**  
-1. Employ strategies for building collaborative environments that enable diverse audiences to support organizational decision-making in the field of computer science.  
-2. Design, develop, and deliver professional-quality oral, written, and visual communications that are coherent, technically sound, and appropriately adapted to specific audiences and contexts.  
-4. Demonstrate an ability to use well-founded and innovative techniques, skills, and tools in computing practices for the purpose of implementing computer solutions that deliver value and accomplish industry-specific goals.  
-5. Develop a security mindset that anticipates adversarial exploits in software architecture and designs to expose potential vulnerabilities, mitigate design flaws, and ensure privacy and enhanced security of data and resources.  
+- 1. Employ strategies for building collaborative environments that enable diverse audiences to support organizational decision-making in the field of computer science.  
+- 2. Design, develop, and deliver professional-quality oral, written, and visual communications that are coherent, technically sound, and appropriately adapted to specific audiences and contexts.  
+- 4. Demonstrate an ability to use well-founded and innovative techniques, skills, and tools in computing practices for the purpose of implementing computer solutions that deliver value and accomplish industry-specific goals.  
+- 5. Develop a security mindset that anticipates adversarial exploits in software architecture and designs to expose potential vulnerabilities, mitigate design flaws, and ensure privacy and enhanced security of data and resources.  
 
 ---
 
@@ -107,12 +107,12 @@ Function searchAnimals(filters):
 
 **How planned enhancement will demonstrate specific skills and align with course outcomes:**  
 
-• Instead of looping through every animal record manually, I’ll use database queries that are built to find results faster. This helps make the search process quicker and more efficient, especially when there are a lot of records. I’ll also make it easier to narrow results using filters to break them into smaller pages.  
-• The original version used a basic loop, which gets slower as more data is added (O(n) time). By using MongoDB with indexes, searches can be done much faster (closer to O(logn)).  
+* Instead of looping through every animal record manually, I’ll use database queries that are built to find results faster. This helps make the search process quicker and more efficient, especially when there are a lot of records. I’ll also make it easier to narrow results using filters to break them into smaller pages.  
+* The original version used a basic loop, which gets slower as more data is added (O(n) time). By using MongoDB with indexes, searches can be done much faster (closer to O(logn)).  
 
 **Course outcomes that enhancement will align with:**  
-3. Design and evaluate computing solutions that solve a given problem using algorithmic principles and computer science practices and standards appropriate to its solution while managing the trade-offs involved in design choices.  
-4. Demonstrate an ability to use well-founded and innovative techniques, skills, and tools in computing practices for the purpose of implementing computer solutions that deliver value and accomplish industry-specific goals.  
+- 3. Design and evaluate computing solutions that solve a given problem using algorithmic principles and computer science practices and standards appropriate to its solution while managing the trade-offs involved in design choices.  
+- 4. Demonstrate an ability to use well-founded and innovative techniques, skills, and tools in computing practices for the purpose of implementing computer solutions that deliver value and accomplish industry-specific goals.  
 
 ---
 
@@ -164,37 +164,37 @@ Operations:
 
 **How planned enhancement will demonstrate specific skills and align with course outcomes:**  
 
-• I’ll organize animal data using MongoDB collections  
-• I’ll connect the app to MongoDB using Spring Data to perform CRUD operations efficiently  
-• I will store animal records permanently instead of in memory, making the app usable beyond a single session  
-• I will validate user input before saving it to MongoDB to make sure data is clean, safe, and accurate  
-• Show real-world development skills by working with widely used technology like MongoDB and Spring Boot  
+- I’ll organize animal data using MongoDB collections  
+- I’ll connect the app to MongoDB using Spring Data to perform CRUD operations efficiently  
+- I will store animal records permanently instead of in memory, making the app usable beyond a single session  
+- I will validate user input before saving it to MongoDB to make sure data is clean, safe, and accurate  
+- Show real-world development skills by working with widely used technology like MongoDB and Spring Boot  
 
 **Course outcomes that enhancement will align with:**  
-3. Design and evaluate computing solutions that solve a given problem using algorithmic principles and computer science practices and standards appropriate to its solution while managing the trade-offs involved in design choices.  
-4. Demonstrate an ability to use well-founded and innovative techniques, skills, and tools in computing practices for the purpose of implementing computer solutions that deliver value and accomplish industry-specific goals.  
-5. Develop a security mindset that anticipates adversarial exploits in software architecture and designs to expose potential vulnerabilities, mitigate design flaws, and ensure privacy and enhanced security of data and resources.  
+- 3. Design and evaluate computing solutions that solve a given problem using algorithmic principles and computer science practices and standards appropriate to its solution while managing the trade-offs involved in design choices.  
+- 4. Demonstrate an ability to use well-founded and innovative techniques, skills, and tools in computing practices for the purpose of implementing computer solutions that deliver value and accomplish industry-specific goals.  
+- 5. Develop a security mindset that anticipates adversarial exploits in software architecture and designs to expose potential vulnerabilities, mitigate design flaws, and ensure privacy and enhanced security of data and resources.  
 
 ---
 
 ## 4. ePortfolio Overall Skill Set  
 
 **Skills and outcomes planned to be illustrated in the code review**  
-• Highlight the change from in-memory, console-based application to a professional, full-stack application reflecting real-world standards  
-• Show how separating the application into models, views, and controllers improves readability, scalability, and team collaboration  
-• Show how RESTful API endpoints are designed and implemented in Spring Boot to manage CRUD operations  
-• Display how Spring Data MongoDB is used to connect the application to NoSQL database  
+- Highlight the change from in-memory, console-based application to a professional, full-stack application reflecting real-world standards  
+- Show how separating the application into models, views, and controllers improves readability, scalability, and team collaboration  
+- Show how RESTful API endpoints are designed and implemented in Spring Boot to manage CRUD operations  
+- Display how Spring Data MongoDB is used to connect the application to NoSQL database  
 
 **Skills and outcomes planned to be illustrated in the narratives**  
-• The narrative will explain the reasoning behind choosing technologies like Spring Boot, Angular, and MongoDB, showing off the trade-off between flexibility, scalability and simplicity  
-• Describe how the MVC pattern and RESTful APIs are used to structure the application in a way that separates concerns and improves maintainability  
-• Includes discussion of input validation, protected endpoints, and proper data handling to mitigate risks  
-• Communicate how enhancements solve real problems and align with industry standards  
+- The narrative will explain the reasoning behind choosing technologies like Spring Boot, Angular, and MongoDB, showing off the trade-off between flexibility, scalability and simplicity  
+- Describe how the MVC pattern and RESTful APIs are used to structure the application in a way that separates concerns and improves maintainability  
+- Includes discussion of input validation, protected endpoints, and proper data handling to mitigate risks  
+- Communicate how enhancements solve real problems and align with industry standards  
 
 **Skills and outcomes planned to be illustrated in the professional self-assessment**  
-• Showing off the growth in integrating frontend, backend, and database layers into a complete application  
-• Shows off the ability to plan, enhance and test an application independently  
-• Demonstrates the ability to learn and apply new tools outside of prior coursework experience  
-• Reflect the shift in academic exercises to building projects that follow real-world practices in software design and development  
-• Shows development of time management, attention to detail, and an understanding of how software must meet both technical and user needs  
+- Showing off the growth in integrating frontend, backend, and database layers into a complete application  
+- Shows off the ability to plan, enhance and test an application independently  
+- Demonstrates the ability to learn and apply new tools outside of prior coursework experience  
+- Reflect the shift in academic exercises to building projects that follow real-world practices in software design and development  
+- Shows development of time management, attention to detail, and an understanding of how software must meet both technical and user needs  
 
