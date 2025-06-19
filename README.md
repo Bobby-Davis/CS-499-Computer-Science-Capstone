@@ -1,8 +1,18 @@
 # CS-499 Computer Science Capstone: Full-Stack Rescue Animal Management System
 
+To reflect on my personal growth throughout the Computer Science program and this capstone experience, I completed a professional self-assessment. it outlines the skills I have developed, the challenges I've overcome, and how this project has prepared
+me for a future role in software engineering.
+
+You can read the full [Professional Self-Assessment here](./Professional%20Self-Assessment.md)
+
 This project is the final capstone for the Bachelor of Science in Computer Science program at Southern New Hampshire University. It showcases my ability to design, enhance, and deliver a complete software solution that reflects real-world standards in software engineering, algorithm development, and database integration.
 
 The capstone project transforms an original Java-based console application, developed in IT-145, into a modern full-stack web application. The enhanced version is built using **Angular** for the frontend, **Spring Boot** for the backend API, and **MongoDB** as the database. The application allows users to view, manage, and filter records for rescue animals like dogs and monkeys, with secure admin-only functionality for creating, updating, and deleting records.
+
+Before beginning the enhancements, I created an intital plan that outlined how I would improve the original artifact across software design and engineering, algorithm and data structures, and databases. This plan served as a roadmap for the technical
+work and helped align the enhancements with course outcomes. 
+
+You can view the full [Initial Enhancement Plan here](./initial-enhancement-plan.md)
 
 Each enhancement aligns with a specific area of the computer science program outcomes, broken down into three categories:
 
@@ -95,8 +105,8 @@ Each enhancement in this capstone project is supported by a detailed narrative t
 
 You can read the full enhancement narratives here:
 - [Software Design and Engineering Narrative](./category-1-software-engineering-design/Software%20Design%20and%20Engineering%20Narrative.md)
-- [Algorithms and Data Structures](./category-2-algorithms-and-data-structures/Algorithms%20and%20Data%20Structures%20Narrative.md)
-- [Databases](./category-3-databases/Databases%20Narrative.md)
+- [Algorithms and Data Structures Narrative](./category-2-algorithms-and-data-structures/Algorithms%20and%20Data%20Structures%20Narrative.md)
+- [Databases Narrative](./category-3-databases/Databases%20Narrative.md)
 
 You can also view the complete source code for both versions of the project:
 - [Original Java Console-Based Application](./original-artifact-rescue-animal-app)
