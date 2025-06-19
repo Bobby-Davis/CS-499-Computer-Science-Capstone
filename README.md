@@ -99,8 +99,8 @@ You can read the full enhancement narratives here:
 - [Databases](./category-3-databases/Databases%20Narrative.md)
 
 You can also view the complete source code for both versions of the project:
-- [Original Java Console-Based Application Narrative](./original-console-program)
-- [Enhanced Full-Stack Web Application Narrative](./enhanced-fullstack-application)
+- [Original Java Console-Based Application](./original-artifact-rescue-animal-app)
+- [Enhanced Full-Stack Web Application](./enhanced-rescue-animal-app)
 
 To view the live ePortfolio site that showcases this capstone project, visit:  
 - [My ePortfolio](https://your-username.github.io/)
