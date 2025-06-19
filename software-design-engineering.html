@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Bobby Davis - ePortfolio - Software Design and Engineering</title>
+    <title>Bobby Davis - ePortfolio - Software Engineering and Design</title>
     <link rel="stylesheet" href="ePortfolio.css">
   </head>
   <body>
@@ -16,9 +16,9 @@
     <!-- Navigation links to trigger section swaps -->
     <div class="nav-wrapper">
       <nav>
-        <a href="index.html">Home</a>
+        <a href="ePortfolio.html">Home</a>
         <a href="code-review.html">Code Review</a> 
-        <a href="software-design-engineering.html">Software Engineering and Design</a> 
+        <a href="software-design-engineering.html" class="active">Software Design and Engineering</a> 
         <a href="algorithms-data-structures.html">Algorithms and Data Structures</a> 
         <a href="databases.html">Databases</a>
       </nav>
@@ -27,7 +27,7 @@
 
 
       <main>
-        <h2>Category 1: Software Engineering and Design</h2>
+        <h2>Category 1: Software Design and Engineering</h2>
   
         <p>
           The artifact I selected for enhancement is my Rescue Animal Management System, originally developed as a Java-based console 
@@ -36,6 +36,7 @@
           no user interface, and no way to use the application outside of development environments.
         </p>
 
+        <h5 class="image-text">Original Java console</h5>
         <img src="images/original-java-console.png" alt="Original Java console application" class="original-screenshot">
 
         <p>
@@ -53,18 +54,18 @@
           The result is a fully interactive and responsive application where 
           users can view, filter, and manage rescue animals through a modern web interface.
         </p>
-          
+        
         <div class="animal-list-image-stack">
           <div>
-            <h3 class="image-text">Angular Frontend Animal List View</h3>
+            <h5 class="image-text">Angular Frontend Animal List View</h5>
             <img src="images/angular-animal-list.png" alt="Angular frontend animal list view" class="animal-list-screenshot">
           </div>
           <div>
-            <h3 class="image-text">Mobile Angular Frontend Animal List View</h3>
+            <h5 class="image-text">Mobile Angular Frontend Animal List View</h5>
             <img src="images/angular-animal-list2.png" alt="Mobile Angular frontend animal list view" class="mobile-animal-list-screenshot">
           </div>
         </div>
-
+        
         <p>
           Admin users can log in to manage animals by adding new ones, updating their details, or removing them from the lists.
           This new version can be used from any device with a browser and stores all data in a real database instead of memory.
@@ -76,6 +77,8 @@
           and application security. I built a secure backend with Spring Boot that exposes REST API endpoints. 
         </p>
           
+        <h5 class="image-text">RESTful API Endpoints</h5>
+
           <div class="springboot-image-stack">
               <img src="images/springboot-controller1.png" alt="Spring Boot controller code1" >
               <img src="images/springboot-controller2.png" alt="Spring Boot controller code2" >
@@ -83,13 +86,13 @@
 
         <p>
           I connected that to an Angular frontend where users  can interact with the data. I also added a login system that uses JWT (JSON Web Tokens) and encrypted
-          passwords with BCrypt so only admins can make changes to the animal list.
-
-          <img src="images/new-app-login.png" alt="New App Login" class="login-screenshot">
-          
-          I changed the code so that dogs and monkeys are now handled through one flexible Animal class,
-          which makes the project easier to expand if we want to add more animals in the future.
+          passwords with BCrypt so only admins can make changes to the animal list. I changed the code so that dogs and monkeys are now handled through one flexible 
+          Animal class, which makes the project easier to expand if we want to add more animals in the future.
         </p>
+
+        <h5 class="image-text">Login</h5>
+
+          <img src="images/admin-login.gif" alt="Admin Login">
   
         <p>
           The artifact directly supports the course outcome related to software engineering, software design, and databases. It shows that I can build an organized, 
@@ -101,12 +104,23 @@
         <p>
           Working on this project taught me a lot about how real applications are built. I learned how to connect the frontend and backend through API calls 
           and how to send and verify JWT tokens to protect certain features. I learned how to handle CORS issues, how to upload and display images using Angular 
-          and Spring Boot, and how to make the user interface more compact and organized. It wasn't as easy as I thought it would be. One of the biggest challenges 
-          I faced was getting the authentication system to work properly and making sure that only admins could perform certain actions. I also had trouble at first 
-          getting images to upload and display correctly from the database but eventually solved the problem by improving how the data was stored and retrieved. As
-           I made progress, I also spent time cleaning up the frontend layout to reduce spacing and improve the look and feel of the animal cards.
+          and Spring Boot, and how to make the user interface more compact and organized.
+        </p> 
+
+        <h5 class="image-text">Testing JWT through Postman</h5>
+        
+        <img src="images/jwt-authentication-test.png" alt="JWT">
+        <img src="images/access-endpoint-with-jwt.png" alt="JWT Access enpoint">
+
+        <h3>Problem Solving</h3>
+        <p>
+          One of the biggest challenges I faced was getting the authentication system to work properly and making sure that only admins could perform certain 
+          actions. Initially there were CORS conflicts between the Angular frontend and the SPring Booot backent, which caused loging and protected requests to fail.
+          I resolved this by configuring a proper CORS filter in Spring Security and allowing the frontend origin while securing the API using JWT-based authentication.
         </p>
-  
+
+        <img src="images/authorization.png" alt="Authorization setup">
+
         <p>
           This enhancement turned a basic, text-based Java program into a complete, real-world application that could actually be used by a rescue organization.
           It demonstrates my skills in full-stack development, software design, and secure coding. More importantly, it shows my ability to take something simple 
@@ -114,9 +128,10 @@
           my growth, and my ability to deliver professional-quality work.
         </p>
 
+        <h5 class="image-text">Enhanced Web Application UI</h5>
+
         <img src="images/new-app-home.png" alt="New Application Home" class="home-screenshot">
     </main>
       
     </body>
 </html>
-
