@@ -41,7 +41,7 @@ You can watch the full code review video here:
 
 This enhancement focuses on refactoring the original console-based Java application into a structured, layered web application. It introduces a RESTful API using Spring Boot, a responsive frontend using Angular, and login functionality using JWT and BCrypt. The software follows the Model-View-Controller (MVC) pattern, demonstrates modular code organization, and includes role-based functionality for admin users.
 
-[View README for Category 1](./category-1-software-engineering-design/README.md)
+[View README for Category 1](./category-1-software-design-engineering/README.md)
 
 ---
 
