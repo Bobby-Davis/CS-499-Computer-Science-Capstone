@@ -113,5 +113,5 @@ You can also view the complete source code for both versions of the project:
 - [Enhanced Full-Stack Web Application](./enhanced-rescue-animal-app)
 
 To view the live ePortfolio site that showcases this capstone project, visit:  
-- [My ePortfolio](https://your-username.github.io/)
+- [My ePortfolio](https://bobby-davis.github.io/ePortfolio/)
 
