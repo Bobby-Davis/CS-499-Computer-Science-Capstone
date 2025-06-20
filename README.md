@@ -59,7 +59,7 @@ This enhancement improves the efficiency of data handling by implementing backen
 
 **Folder:** `category-3-databases`
 
-This enhancement focuses on transforming the application's data storage layer by integrating MongoDB to replace temporary `ArrayList` memory structures. Animal data is now stored persistently using MongoDB collections, and CRUD operations are performed using Spring Data MongoDB repositories. Input validation is enforced before data is saved, and a unified data model was created to simplify record management.
+This enhancement focuses on transforming the application's data storage layer by integrating MongoDB to replace temporary ArrayList memory structures. Animal data is now stored persistently using MongoDB collections, and CRUD operations are performed using Spring Data MongoDB repositories. Input validation is enforced before data is saved, and a unified data model was created to simplify record management.
 
 [View README for Category 3](./category-3-databases/README.md)
 
