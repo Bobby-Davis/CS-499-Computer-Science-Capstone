@@ -1,6 +1,6 @@
-# CS-499 Capstone - Category 1: Software Engineering and Design
+# CS-499 Capstone - Category 1: Software Design and Engineering
 
-This section of the capstone focuses on **Software Engineering and Design** by transforming a basic Java console application into a full-stack web application with a modern architecture using **Spring Boot**, **Angular**, and **MongoDB**.
+This section of the capstone focuses on **Software Design and Engineering** by transforming a basic Java console application into a full-stack web application with a modern architecture using **Spring Boot**, **Angular**, and **MongoDB**.
 
 ## Original Program
 
@@ -14,7 +14,7 @@ This version used simple `ArrayList` structures, relied on console input/output,
 
 ---
 
-## Enhancements for Software Engineering and Design
+## Enhancements for Software Design and Engineering
 
 To meet modern software engineering standards, I restructure the project using:
 
