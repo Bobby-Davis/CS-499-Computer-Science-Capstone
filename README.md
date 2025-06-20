@@ -115,3 +115,6 @@ You can also view the complete source code for both versions of the project:
 To view the live ePortfolio site that showcases this capstone project, visit:  
 - [My ePortfolio](https://bobby-davis.github.io/ePortfolio/)
 
+All images used for enhancement is credited here:
+[Image credits](./images/image-credits.md)
+
