@@ -70,7 +70,7 @@ header h2 {
 .github-link {
   position: absolute;
   top: 20px;
-  right: 500px;
+  right: 20px;
   font-size: 14px;
   z-index: 10;
 }
